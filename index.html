@@ -31,12 +31,12 @@ var seconds=today.getSeconds();
 var time=today.getHours()+':'+today.getMinutes()+':'+today.getSeconds();
 document.getElementById("demo").innerHTML=today.toLocaleString();
 document.getElementById('demo1').innerHTML=time;
-if (minutes/60===0&&seconds<=5){
+if (minutes/60===0&& seconds<=5){
         var hourODd=document.getElementById('hourOdd').innerHTML="odd hours";
         var audio = new Audio('mixkit-alert-alarm-1005.wav');
             audio.play();
     }
-    else if(seconds/60===0&&seconds<=5){
+    else if(seconds/60===0&& seconds<=5){
         document.getElementById('hourOdd').innerHTML="even hours";
         var audio = new Audio('mixkit-alert-alarm-1005.wav');
             audio.play();
