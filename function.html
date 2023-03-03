@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>we are going to work on if clause now.</h1>
+    <script>
+        if(5>7){
+            document.write('5>7   i  correct statement');
+        }
+        else{
+            document.write('5>7   i am not a correct statement');
+        } -->
+    </script>
+    <div style="text-align: center;">
+    <h1>java script switch statements</h1>
+    <p  id="demo"></p>
+    <p id="demo1"></p>
+    <p id="hourOdd"></p>
+    </div>
+    <script>
+var timer=setInterval(function(){
+var today=new Date();
+var hours=today.getHours();
+var minutes=today.getMinutes();
+var time=today.getHours()+':'+today.getMinutes()+':'+today.getSeconds();
+document.getElementById("demo").innerHTML=today.toLocaleString();
+document.getElementById('demo1').innerHTML=time;
+if (minutes/60===0){
+        var hourODd=document.getElementById('hourOdd').innerHTML="odd hours";
+        var audio = new Audio('mixkit-alert-alarm-1005.wav');
+            audio.play();
+    }
+    else{
+        document.getElementById('hourOdd').innerHTML="even hours";
+        // var audio = new Audio('mixkit-alert-alarm-1005.wav');
+        //     audio.play();
+    }
+    },1000);
+   
+    </script>
+
+
+
+
+
+
+
+
+<!-- 
+<script>
+     document.getElementById('inputfile')
+            .addEventListener('change', function() {
+              
+            var fr=new FileReader();
+            fr.onload=function(){
+                document.getElementById('output')
+                        .textContent=fr.result;
+            }
+              
+            fr.readAsText(this.files[0]);
+        })
+</script> -->
+</body>
+</html>
