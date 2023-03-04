@@ -31,20 +31,21 @@ var seconds=today.getSeconds();
 var time=today.getHours()+':'+today.getMinutes()+':'+today.getSeconds();
 document.getElementById("demo").innerHTML=today.toLocaleString();
 document.getElementById('demo1').innerHTML=time;
-if (minutes/60===0 && seconds <= 5){
+if (minutes%60 === 0 && seconds <= 5){
         var hourODd=document.getElementById('hourOdd').innerHTML="odd hours";
         var audio = new Audio('alarm1.wav');
             audio.play();
     }
-    else if(minutes/30===2 && seconds <=5 && minutes/60!==0){
+    else if(minutes%30 === 0 && seconds <=5){
         document.getElementById('hourOdd').innerHTML="even hours";
-        var audio = new Audio('alarm-Train.mp3');
+        var audio = new Audio('alarmTrain.mp3');
         audio.play();
     }
-    else if(seconds/60 ===0 && seconds <=5 && minutes/60!==0){
-        var audio =new Audio('alarm3.mp3');
+    else if(seconds%60 === 0 && seconds <=5){
+        var audio =new Audio('alarm2.mp3');
         audio.play();
     }
+   
     },1000);
    
     </script>
