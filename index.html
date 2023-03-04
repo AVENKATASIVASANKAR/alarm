@@ -33,13 +33,17 @@ document.getElementById("demo").innerHTML=today.toLocaleString();
 document.getElementById('demo1').innerHTML=time;
 if (minutes/60===0 && seconds <= 5){
         var hourODd=document.getElementById('hourOdd').innerHTML="odd hours";
-        var audio = new Audio('mixkit-alert-alarm-1005.wav');
+        var audio = new Audio('alarm1.wav');
             audio.play();
     }
-    else if(seconds/60===0 && seconds <=5){
+    else if(minutes/30===2 && seconds <=5 && minutes/60!==0){
         document.getElementById('hourOdd').innerHTML="even hours";
-        var audio = new Audio('impact-6291.mp3');
-            audio.play();
+        var audio = new Audio('alarm-Train.mp3');
+        audio.play();
+    }
+    else if(seconds/60 ===0 && seconds <=5 && minutes/60!==0){
+        var audio =new Audio('alarm3.mp3');
+        audio.play();
     }
     },1000);
    
