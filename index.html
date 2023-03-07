@@ -16,7 +16,13 @@
             document.write('5>7   i am not a correct statement');
         } 
     </script>-->
+
+
+
+    <!--timere heading here -->
     <h2 id="num">1</h2>
+        <!----->
+
     <div style="text-align: center;">
     <h1>java script switch statements</h1>
     <p  id="demo"></p>
@@ -60,21 +66,21 @@
 
 
                             var work= setInterval(function(){  
-    var num1=document.getElementById(num);
-    var numOpe=num.innerHTML;
-var numIn=parseFloat(num.innerHTML);
+                                 var num1=document.getElementById(num);
+                                 var numOpe=num.innerHTML;
+                                 numIn=parseFloat(num.innerHTML);
 
 
-var numINC=++numIn;
-document.getElementById("num").innerHTML=numINC;
+                                        var numINC=++numIn;
+                                        document.getElementById("num").innerHTML=numINC;
 
-if (numIn/3600===1){
-  var audio=new Audio('Sound.mp3');
-  audio.play();
-}
-    },1000)
+                                        if (numIn%3600===0){
+                                          var audio=new Audio('Sound.mp3');
+                                          audio.play();
+                                            }
+                                },1000)
    
-    </script>
+                                     </script>
 
 
 
