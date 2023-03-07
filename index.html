@@ -39,7 +39,7 @@
             document.getElementById("demo").innerHTML=today.toLocaleString();
             document.getElementById('demo1').innerHTML=time;
 
-                if (minutes / 59 === 1 && seconds <= 5){
+                if (minutes % 60 === 0  && seconds <= 5){
                 hourODd=document.getElementById('hourOdd').innerHTML="odd hours";
                 audio = new Audio('alarm1.wav');
                 audio.play();
